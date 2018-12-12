@@ -51,7 +51,7 @@ function Scene(factory) {
       gl.vertexAttribPointer(shaderProgram.vertexPositionAttribute, factory.hurufVertexPositionBuffer.itemSize, gl.FLOAT, false, 0, 0)
   
       setMatrixUniforms(shaderProgram)
-      gl.drawArrays(gl.TRIANGLES, 0, factory.hurufVertexPositionBuffer.numItems)
+      gl.drawArrays(gl.TRIANGLE_STRIP, 0, factory.hurufVertexPositionBuffer.numItems)
   
     }
   
