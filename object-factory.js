@@ -26,6 +26,15 @@ function ObjectFactory(GL,shader){
       y_speed = sx*sin_t + sy*cos_t
     }
     
+    function scaling(matArr,k)
+    {
+        for(var i=0; i <matArr.length;i++)
+        {
+          matArr[i] = matArr[i]*k;
+        }
+        return matArr;
+    }
+
     function do3dTranslation(object){
       
       object.x+=object.x_speed
@@ -180,6 +189,8 @@ function ObjectFactory(GL,shader){
       -0.4, 0.6, 0.5//88
     ]
   
+    huruf.positions = scaling(huruf.positions,0.5);
+
     huruf.x =-0.375       
     huruf.y = -0.125
     huruf.z = -1.1
